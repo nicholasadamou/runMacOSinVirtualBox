@@ -213,7 +213,7 @@ createClover() {
     extractAPFS
     while [ ! -f "Clover-v2.4k-4533-X64.iso" ]; do
       info " - Downloading Clover (needs Internet access)..." 80
-      curl -Lk https://sourceforge.net/projects/cloverefiboot/files/Bootable_ISO/CloverISO-4533.tar.lzma/download -o clover.tar.lzma
+      wget "https://sourceforge.net/projects/cloverefiboot/files/Bootable_ISO/CloverISO-4533.tar.lzma/download" -O clover.tar.lzma
       xz -d clover.tar.lzma && tar xf clover.tar
       sleep 1
     done
